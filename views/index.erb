@@ -4,9 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>content.io</title>
+	<style>
+		:root {
+			--content-primary-color: #<%= @content.primary %>;
+			--content-secondary-color: #<%= @content.secondary %>;
+			--content-accent-color: blue;
+		}
+	</style>
 	<link href="/global.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<h1 id="content">CONTENT</h1>
+	<div id="content-container">
+		<div class="content-side"></div>
+		<div class="content-center">
+			<h1 id="content">CONTENT</h1>
+		</div>
+		<div class="content-side"></div>
+	</div>
 </body>
 </html>
