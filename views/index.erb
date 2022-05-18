@@ -8,16 +8,23 @@
 		:root {
 			--content-primary-color: #<%= @content.primary %>;
 			--content-secondary-color: #<%= @content.secondary %>;
-			--content-accent-color: blue;
+			--content-accent-color: #<%= @content.accent %>;
+			--content-text-color: #<%= @content.text_color %>;
+			--content-text-size: <%= @content.text_size%>px;
 		}
 	</style>
-	<link href="/global.css" rel="stylesheet" type="text/css" />
+	<link href="/styles/global.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="content-container">
 		<div class="content-side"></div>
 		<div class="content-center">
-			<h1 id="content">CONTENT</h1>
+			<div class="glowing-container">
+				<h1 id="content">CONTENT</h1>
+				<% 15.times do |i| %>
+					<span class="particle" style="--i:<%= i%>;"></span>
+				<% end %>
+			</div>
 		</div>
 		<div class="content-side"></div>
 	</div>
