@@ -4,6 +4,8 @@ require 'securerandom'
 class Content
 	TEXT_COLOR_LIGHT_THRESHOLD = 186
 
+	attr_reader :rand
+
 	def initialize(seed = nil)
 		@rand = Random.new
 		@rand = Random.new(seed) unless seed.nil?

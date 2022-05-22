@@ -37,7 +37,7 @@
 .particle {
 	position: absolute;
 	top: calc(200px);
-	left: calc(80px * var(--i));
+	left: calc(80px * var(--particle-index));
 }
 
 .particle:before {
@@ -52,7 +52,7 @@
 				0 0 60px var(--content-text-color),
 				0 0 80px var(--content-text-color);
 	animation: floating-particle 1s infinite linear;
-	animation-delay: var(--i)s;
+	animation-delay: var(--delay);
 }
 
 @keyframes floating-particle {
