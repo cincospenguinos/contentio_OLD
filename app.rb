@@ -52,3 +52,8 @@ get '/' do
 	@content = Content.new
 	erb :index
 end
+
+get '/:id' do
+	@content = Content.new(params[:id].to_i)
+	erb :index
+end
